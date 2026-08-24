@@ -10,14 +10,14 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     let config = Config::new(&args).unwrap_or_else(|error| {
-        println!("Error: {}", error);
+        eprintln!("Error: {}", error);
         process::exit(1)
     });
     println!("query: {}, filename: {}", config.query, config.filename);
     println!("args: {:?}", args);
 
     if let Err(e) = run(config) {
-        println!("Application error: {}", e);
+        eprintln!("Application error: {}", e);
         process::exit(1)
     }
 }

@@ -1,0 +1,3 @@
+query: Twi, filename: poem.txt
+args: ["target/debug/minigrep", "Twi", "poem.txt"]
+Twinkle Twinkle Little Star :twinkle
